@@ -1,0 +1,1049 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Copa 2026 Figurinhas — Sorvetes Guri Turvo</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Nunito:wght@400;600;700;800;900&family=Oswald:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --verde: #009c3b;
+  --amarelo: #ffdf00;
+  --azul: #002776;
+  --laranja: #ff6b00;
+  --branco: #ffffff;
+  --creme: #fffbf0;
+  --cinza: #f4f4f4;
+  --dark: #111827;
+}
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+
+html{scroll-behavior:smooth;}
+
+body{
+  font-family:'Nunito',sans-serif;
+  background:var(--creme);
+  color:var(--dark);
+  overflow-x:hidden;
+}
+
+/* ─── UTILITÁRIOS ─── */
+.container{max-width:1100px;margin:0 auto;padding:0 20px;}
+.btn{
+  display:inline-block;padding:14px 32px;border-radius:50px;
+  font-family:'Oswald',sans-serif;font-size:1.1rem;letter-spacing:1px;
+  text-decoration:none;border:none;cursor:pointer;transition:all .25s;
+  font-weight:600;text-transform:uppercase;
+}
+.btn-amarelo{background:var(--amarelo);color:var(--azul);}
+.btn-amarelo:hover{background:#ffd000;transform:translateY(-2px);box-shadow:0 8px 24px rgba(255,223,0,.5);}
+.btn-verde{background:var(--verde);color:#fff;}
+.btn-verde:hover{background:#007d2f;transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,156,59,.4);}
+.btn-azul{background:var(--azul);color:#fff;}
+.btn-azul:hover{background:#001a59;transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,39,118,.4);}
+.btn-whats{background:#25D366;color:#fff;}
+.btn-whats:hover{background:#1ebe58;transform:translateY(-2px);box-shadow:0 8px 24px rgba(37,211,102,.4);}
+
+/* ─── PANINI BAR ─── */
+.panini-bar{
+  background:var(--verde);padding:8px 20px;text-align:center;
+}
+.panini-bar p{
+  font-family:'Oswald',sans-serif;font-size:.9rem;color:#fff;
+  letter-spacing:1.5px;font-weight:600;text-transform:uppercase;
+  display:flex;align-items:center;justify-content:center;gap:8px;
+}
+.panini-badge{
+  background:#fff;color:var(--verde);
+  font-size:.75rem;font-weight:800;padding:3px 10px;
+  border-radius:20px;letter-spacing:1px;
+}
+
+/* ─── HEADER ─── */
+header{
+  background:linear-gradient(90deg,var(--verde) 0%,#007d2f 50%,var(--azul) 100%);
+  padding:14px 0;
+  position:sticky;top:0;z-index:100;
+  box-shadow:0 4px 20px rgba(0,0,0,.3);
+}
+.header-inner{
+  display:flex;align-items:center;justify-content:space-between;gap:16px;
+}
+.logo-area{display:flex;align-items:center;gap:12px;}
+.logo-icon{
+  width:52px;height:52px;border-radius:50%;
+  background:var(--amarelo);
+  display:flex;align-items:center;justify-content:center;
+  font-size:26px;flex-shrink:0;
+}
+.logo-text{line-height:1.1;}
+.logo-text span{display:block;}
+.logo-top{font-family:'Bebas Neue',sans-serif;font-size:1.5rem;color:var(--amarelo);letter-spacing:2px;}
+.logo-sub{font-size:.72rem;color:rgba(255,255,255,.7);font-weight:600;letter-spacing:1px;text-transform:uppercase;}
+nav{display:flex;gap:6px;flex-wrap:wrap;}
+nav a{
+  color:rgba(255,255,255,.85);text-decoration:none;font-weight:700;font-size:.85rem;
+  padding:8px 14px;border-radius:30px;transition:all .2s;letter-spacing:.5px;text-transform:uppercase;
+}
+nav a:hover{background:rgba(255,255,255,.15);color:#fff;}
+
+/* ─── HERO ─── */
+.hero{
+  background:linear-gradient(135deg,var(--verde) 0%,#007d2f 35%,var(--azul) 100%);
+  padding:80px 20px 100px;
+  text-align:center;
+  position:relative;
+  overflow:hidden;
+}
+.hero::before{
+  content:'';position:absolute;inset:0;
+  background:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+.hero-badge{
+  display:inline-block;background:var(--amarelo);color:var(--azul);
+  font-family:'Oswald',sans-serif;font-size:.85rem;letter-spacing:2px;
+  padding:6px 20px;border-radius:30px;margin-bottom:20px;font-weight:700;text-transform:uppercase;
+}
+.hero h1{
+  font-family:'Bebas Neue',sans-serif;
+  font-size:clamp(3rem,8vw,6rem);
+  color:#fff;line-height:.95;
+  margin-bottom:16px;letter-spacing:2px;
+}
+.hero h1 span{color:var(--amarelo);}
+.hero p{
+  font-size:1.15rem;color:rgba(255,255,255,.85);
+  max-width:600px;margin:0 auto 36px;font-weight:600;line-height:1.6;
+}
+.hero-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;}
+
+.hero-balls{
+  position:absolute;pointer-events:none;
+}
+.hero-balls .ball{
+  position:absolute;width:120px;height:120px;border-radius:50%;
+  background:rgba(255,255,255,.06);border:2px solid rgba(255,255,255,.1);
+  animation:float 6s ease-in-out infinite;
+}
+.hero-balls .ball:nth-child(1){top:-30px;left:5%;width:160px;height:160px;animation-delay:0s;}
+.hero-balls .ball:nth-child(2){bottom:20px;right:8%;width:100px;height:100px;animation-delay:2s;}
+.hero-balls .ball:nth-child(3){top:40%;left:-40px;width:80px;height:80px;animation-delay:4s;}
+@keyframes float{0%,100%{transform:translateY(0);}50%{transform:translateY(-18px);}}
+
+/* ─── SEÇÃO CONTAGEM ─── */
+.countdown-bar{
+  background:var(--amarelo);padding:18px 20px;text-align:center;
+}
+.countdown-bar p{font-family:'Oswald',sans-serif;font-size:1.1rem;color:var(--azul);font-weight:700;letter-spacing:1px;}
+.countdown-bar strong{font-size:1.4rem;}
+#timer{display:inline-flex;gap:16px;align-items:center;margin-top:6px;}
+.tc{text-align:center;}
+.tc span:first-child{
+  display:block;font-family:'Bebas Neue',sans-serif;font-size:2.4rem;
+  color:var(--azul);line-height:1;
+}
+.tc small{font-size:.7rem;text-transform:uppercase;letter-spacing:1px;color:rgba(0,39,118,.7);font-weight:700;}
+.tc-sep{font-family:'Bebas Neue',sans-serif;font-size:2rem;color:var(--azul);}
+
+/* ─── SEÇÕES ─── */
+section{padding:80px 20px;}
+.section-tag{
+  display:inline-block;font-family:'Oswald',sans-serif;font-size:.8rem;
+  letter-spacing:2px;text-transform:uppercase;padding:5px 16px;border-radius:20px;
+  margin-bottom:12px;font-weight:600;
+}
+.tag-verde{background:#d4f7e3;color:var(--verde);}
+.tag-azul{background:#dce8ff;color:var(--azul);}
+.tag-amarelo{background:#fff3b0;color:#8a6000;}
+.tag-laranja{background:#ffe8d4;color:#c44a00;}
+.tag-whats{background:#d4f5e0;color:#075e35;}
+section h2{
+  font-family:'Bebas Neue',sans-serif;
+  font-size:clamp(2rem,5vw,3.2rem);
+  color:var(--azul);letter-spacing:1px;margin-bottom:12px;
+}
+section p.lead{font-size:1.05rem;color:#555;max-width:600px;margin-bottom:32px;line-height:1.7;}
+
+/* ─── PRÉ-VENDA ─── */
+.prevenda{background:#f8fff9;}
+.products-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px;margin-bottom:40px;}
+.product-card{
+  border:2px solid #e8e8e8;border-radius:20px;padding:28px 24px;text-align:center;
+  transition:all .3s;background:#fff;position:relative;overflow:hidden;
+}
+.product-card:hover{border-color:var(--verde);transform:translateY(-4px);box-shadow:0 16px 40px rgba(0,156,59,.15);}
+.product-card.destaque{border-color:var(--amarelo);background:linear-gradient(135deg,#fffde7,#fff9c4);}
+.product-badge{
+  position:absolute;top:16px;right:16px;
+  background:var(--laranja);color:#fff;
+  font-size:.7rem;font-weight:800;letter-spacing:1px;text-transform:uppercase;
+  padding:4px 10px;border-radius:20px;
+}
+.product-icon{font-size:3.5rem;margin-bottom:12px;}
+.product-card h3{font-family:'Oswald',sans-serif;font-size:1.3rem;color:var(--azul);margin-bottom:6px;font-weight:700;}
+.product-card .price{
+  font-family:'Bebas Neue',sans-serif;font-size:2rem;color:var(--verde);margin:10px 0;
+}
+.product-card .price small{font-size:1rem;color:#888;font-family:'Nunito',sans-serif;font-weight:600;}
+.product-card p{font-size:.9rem;color:#666;margin-bottom:18px;line-height:1.5;}
+
+/* ─── FORM ─── */
+.form-section{background:linear-gradient(135deg,var(--verde) 0%,#005e22 60%,var(--azul) 100%);color:#fff;}
+.form-section h2{color:var(--amarelo);}
+.form-section p.lead{color:rgba(255,255,255,.8);}
+.form-box{
+  background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);
+  border-radius:24px;padding:40px;max-width:680px;
+  backdrop-filter:blur(10px);
+}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+@media(max-width:600px){.form-row{grid-template-columns:1fr;}}
+.form-group{display:flex;flex-direction:column;gap:8px;margin-bottom:16px;}
+.form-group label{font-weight:700;font-size:.9rem;color:rgba(255,255,255,.9);letter-spacing:.5px;}
+.form-group input,.form-group select,.form-group textarea{
+  padding:14px 18px;border-radius:12px;border:2px solid rgba(255,255,255,.15);
+  background:rgba(255,255,255,.1);color:#fff;font-size:1rem;font-family:'Nunito',sans-serif;
+  transition:border-color .2s;outline:none;
+}
+.form-group input::placeholder,.form-group textarea::placeholder{color:rgba(255,255,255,.4);}
+.form-group input:focus,.form-group select:focus,.form-group textarea:focus{border-color:var(--amarelo);}
+.form-group select option{background:var(--azul);}
+.checkbox-group{display:flex;flex-direction:column;gap:10px;}
+.checkbox-item{display:flex;align-items:center;gap:10px;cursor:pointer;}
+.checkbox-item input[type=checkbox]{width:18px;height:18px;accent-color:var(--amarelo);cursor:pointer;}
+.checkbox-item span{font-size:.95rem;color:rgba(255,255,255,.85);}
+.form-submit{margin-top:8px;}
+.success-msg{
+  display:none;background:rgba(37,211,102,.15);border:2px solid #25D366;
+  border-radius:16px;padding:24px;text-align:center;margin-top:20px;
+}
+.success-msg h3{color:#25D366;font-family:'Oswald',sans-serif;font-size:1.4rem;margin-bottom:6px;}
+.success-msg p{color:rgba(255,255,255,.8);font-size:.95rem;}
+
+/* ─── WHATSAPP ─── */
+.whats-section{background:var(--creme);}
+.whats-card{
+  background:#fff;border-radius:24px;padding:40px;
+  display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;
+  box-shadow:0 8px 40px rgba(0,0,0,.08);max-width:900px;
+}
+@media(max-width:700px){.whats-card{grid-template-columns:1fr;}}
+.whats-phone{
+  background:linear-gradient(135deg,#075e35,#128c7e);
+  border-radius:20px;padding:30px 24px;color:#fff;text-align:center;
+}
+.whats-phone .wi{font-size:4rem;margin-bottom:12px;}
+.whats-phone h3{font-family:'Bebas Neue',sans-serif;font-size:1.8rem;letter-spacing:1px;margin-bottom:8px;}
+.whats-phone p{font-size:.9rem;opacity:.85;line-height:1.5;margin-bottom:20px;}
+.whats-benefits{list-style:none;margin:20px 0;}
+.whats-benefits li{
+  display:flex;align-items:center;gap:10px;margin-bottom:12px;font-weight:700;font-size:.95rem;
+}
+.whats-benefits li::before{content:'✅';font-size:1rem;}
+
+/* ─── DIA DE TROCAS ─── */
+.diatrocas-section{
+  background:linear-gradient(135deg,var(--amarelo) 0%,#ffc800 100%);
+  padding:80px 20px;
+  position:relative;overflow:hidden;
+}
+.diatrocas-section::before{
+  content:'🎴';position:absolute;font-size:180px;opacity:.07;
+  top:-20px;right:-30px;transform:rotate(15deg);pointer-events:none;
+}
+.diatrocas-section::after{
+  content:'🔄';position:absolute;font-size:140px;opacity:.07;
+  bottom:-20px;left:-20px;transform:rotate(-10deg);pointer-events:none;
+}
+.diatrocas-section h2{color:var(--azul);}
+.diatrocas-section p.lead{color:rgba(0,39,118,.75);}
+.diatrocas-inner{
+  display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;
+}
+@media(max-width:720px){.diatrocas-inner{grid-template-columns:1fr;}}
+.evento-card{
+  background:#fff;border-radius:28px;
+  box-shadow:0 20px 60px rgba(0,39,118,.18);
+  overflow:hidden;
+}
+.evento-header{
+  background:var(--azul);padding:24px 28px;
+  display:flex;align-items:center;gap:16px;
+}
+.evento-header .eh-icon{font-size:2.4rem;}
+.evento-header h3{
+  font-family:'Bebas Neue',sans-serif;font-size:1.7rem;
+  color:#fff;letter-spacing:1px;line-height:1.1;
+}
+.evento-header p{font-size:.78rem;color:rgba(255,255,255,.65);font-weight:600;text-transform:uppercase;letter-spacing:1px;}
+.evento-body{padding:28px;}
+.evento-info{display:flex;flex-direction:column;gap:14px;}
+.ei-row{
+  display:flex;align-items:flex-start;gap:14px;
+  padding-bottom:14px;border-bottom:1px solid #f0f0f0;
+}
+.ei-row:last-child{border-bottom:none;padding-bottom:0;}
+.ei-icon{
+  width:42px;height:42px;border-radius:12px;
+  background:#e8f7ef;display:flex;align-items:center;justify-content:center;
+  font-size:1.2rem;flex-shrink:0;
+}
+.ei-icon.azul{background:#dce8ff;}
+.ei-icon.amarelo{background:#fff3b0;}
+.ei-icon.laranja{background:#ffe8d4;}
+.ei-text h4{font-weight:800;font-size:.95rem;color:var(--dark);margin-bottom:2px;}
+.ei-text p{font-size:.85rem;color:#666;line-height:1.5;}
+.ei-text strong{color:var(--verde);}
+
+.diatrocas-info{display:flex;flex-direction:column;gap:20px;}
+.di-highlight{
+  background:rgba(255,255,255,.4);border:2px solid rgba(0,39,118,.15);
+  border-radius:20px;padding:24px;
+}
+.di-highlight h3{
+  font-family:'Oswald',sans-serif;font-size:1.2rem;color:var(--azul);
+  font-weight:700;margin-bottom:10px;
+}
+.di-highlight p{font-size:.92rem;color:rgba(0,39,118,.8);line-height:1.6;}
+.regras-lista{list-style:none;display:flex;flex-direction:column;gap:8px;margin-top:6px;}
+.regras-lista li{
+  display:flex;align-items:flex-start;gap:8px;font-size:.9rem;color:rgba(0,39,118,.85);font-weight:600;
+}
+.regras-lista li::before{content:'✅';flex-shrink:0;}
+.proximo-evento{
+  background:var(--azul);border-radius:20px;padding:24px;text-align:center;
+}
+.proximo-evento p{font-size:.8rem;color:rgba(255,255,255,.65);text-transform:uppercase;letter-spacing:1.5px;font-weight:700;margin-bottom:6px;}
+.proximo-evento h3{
+  font-family:'Bebas Neue',sans-serif;font-size:2.4rem;color:var(--amarelo);
+  letter-spacing:1px;line-height:1;margin-bottom:4px;
+}
+.proximo-evento span{font-size:.85rem;color:rgba(255,255,255,.7);font-weight:600;}
+.notificar-btn{
+  display:block;margin-top:14px;
+  background:var(--amarelo);color:var(--azul);
+  font-family:'Oswald',sans-serif;font-weight:700;font-size:1rem;
+  letter-spacing:1px;text-transform:uppercase;text-decoration:none;
+  padding:12px 24px;border-radius:50px;border:none;cursor:pointer;
+  transition:all .2s;
+}
+.notificar-btn:hover{background:#ffd000;transform:translateY(-2px);}
+
+.troca-section{background:#f0fdf4;}
+.troca-board{
+  display:grid;grid-template-columns:1fr 1fr;gap:30px;
+  margin-bottom:40px;
+}
+@media(max-width:700px){.troca-board{grid-template-columns:1fr;}}
+.troca-col{background:var(--creme);border-radius:20px;padding:28px;}
+.troca-col h3{
+  font-family:'Oswald',sans-serif;font-size:1.2rem;font-weight:700;
+  margin-bottom:18px;padding-bottom:12px;border-bottom:2px solid #eee;
+}
+.troca-col.oferta h3{color:var(--verde);}
+.troca-col.busca h3{color:var(--azul);}
+.sticker-post{
+  background:#fff;border-radius:14px;padding:16px;margin-bottom:12px;
+  border:2px solid #eee;transition:border-color .2s;
+  display:flex;align-items:center;gap:14px;
+}
+.sticker-post:hover{border-color:var(--verde);}
+.sticker-num{
+  width:48px;height:48px;border-radius:50%;
+  background:linear-gradient(135deg,var(--amarelo),var(--laranja));
+  display:flex;align-items:center;justify-content:center;
+  font-family:'Bebas Neue',sans-serif;font-size:1.2rem;color:var(--azul);flex-shrink:0;
+}
+.sticker-info h4{font-weight:800;font-size:.95rem;margin-bottom:2px;}
+.sticker-info p{font-size:.8rem;color:#888;}
+.sticker-info .tag-qty{
+  display:inline-block;background:#e8f7ef;color:var(--verde);
+  font-size:.72rem;font-weight:700;padding:2px 8px;border-radius:10px;margin-top:4px;
+}
+.sticker-info .tag-want{
+  display:inline-block;background:#dce8ff;color:var(--azul);
+  font-size:.72rem;font-weight:700;padding:2px 8px;border-radius:10px;margin-top:4px;
+}
+
+/* ─── FORM TROCA ─── */
+.anuncio-form{
+  background:var(--creme);border:2px solid #e8e8e8;border-radius:24px;padding:36px;max-width:700px;
+}
+.anuncio-form h3{font-family:'Oswald',sans-serif;font-size:1.5rem;color:var(--azul);margin-bottom:6px;font-weight:700;}
+.anuncio-form p{font-size:.9rem;color:#666;margin-bottom:24px;}
+.anuncio-form .form-group label{color:var(--dark);}
+.anuncio-form input,.anuncio-form select,.anuncio-form textarea{
+  padding:12px 16px;border-radius:10px;border:2px solid #e0e0e0;
+  background:#fff;color:var(--dark);font-size:.95rem;font-family:'Nunito',sans-serif;
+  outline:none;transition:border-color .2s;width:100%;
+}
+.anuncio-form input:focus,.anuncio-form select:focus,.anuncio-form textarea:focus{border-color:var(--verde);}
+.anuncio-form textarea{resize:vertical;min-height:80px;}
+.tipo-troca{display:flex;gap:12px;flex-wrap:wrap;}
+.tipo-btn{
+  flex:1;min-width:120px;padding:12px;border-radius:12px;border:2px solid #e0e0e0;
+  background:#fff;cursor:pointer;text-align:center;transition:all .2s;font-family:'Nunito',sans-serif;font-weight:700;
+}
+.tipo-btn:hover{border-color:var(--verde);}
+.tipo-btn.ativo{border-color:var(--verde);background:#e8f7ef;color:var(--verde);}
+.tipo-btn span{display:block;font-size:1.4rem;margin-bottom:4px;}
+
+/* ─── COMO FUNCIONA ─── */
+.como-section{background:linear-gradient(135deg,var(--verde) 0%,#006b28 100%);}
+.como-section h2{color:var(--amarelo);}
+.como-section p.lead{color:rgba(255,255,255,.8);}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px;}
+.step{text-align:center;padding:28px 20px;}
+.step-num{
+  width:56px;height:56px;border-radius:50%;
+  background:var(--amarelo);color:var(--azul);
+  font-family:'Bebas Neue',sans-serif;font-size:1.8rem;
+  display:flex;align-items:center;justify-content:center;margin:0 auto 14px;
+  box-shadow:0 4px 16px rgba(255,223,0,.4);
+}
+.step h3{font-family:'Oswald',sans-serif;font-size:1.05rem;color:#fff;margin-bottom:8px;font-weight:700;}
+.step p{font-size:.88rem;color:rgba(255,255,255,.7);line-height:1.6;}
+
+/* ─── FOOTER ─── */
+footer{
+  background:var(--dark);color:rgba(255,255,255,.7);
+  padding:48px 20px 28px;text-align:center;
+}
+.footer-logo{
+  font-family:'Bebas Neue',sans-serif;font-size:2rem;
+  color:var(--amarelo);letter-spacing:2px;margin-bottom:6px;
+}
+.footer-sub{font-size:.85rem;color:rgba(255,255,255,.4);margin-bottom:20px;}
+.footer-links{display:flex;justify-content:center;gap:20px;flex-wrap:wrap;margin-bottom:24px;}
+.footer-links a{color:rgba(255,255,255,.6);text-decoration:none;font-size:.85rem;font-weight:600;transition:color .2s;}
+.footer-links a:hover{color:var(--amarelo);}
+.footer-copy{font-size:.78rem;color:rgba(255,255,255,.3);}
+
+/* ─── FLOATING WHATS ─── */
+.fab-whats{
+  position:fixed;bottom:28px;right:24px;z-index:999;
+  width:58px;height:58px;border-radius:50%;
+  background:#25D366;color:#fff;border:none;cursor:pointer;
+  font-size:1.6rem;display:flex;align-items:center;justify-content:center;
+  box-shadow:0 6px 24px rgba(37,211,102,.5);
+  animation:pulse-whats 2s infinite;text-decoration:none;
+}
+@keyframes pulse-whats{0%,100%{box-shadow:0 6px 24px rgba(37,211,102,.5);}50%{box-shadow:0 6px 32px rgba(37,211,102,.9);}}
+
+/* ─── MODAL ─── */
+.modal-overlay{
+  display:none;position:fixed;inset:0;background:rgba(0,0,0,.6);
+  z-index:500;align-items:center;justify-content:center;padding:20px;
+}
+.modal-overlay.open{display:flex;}
+.modal{
+  background:#fff;border-radius:24px;padding:40px;max-width:460px;width:100%;
+  text-align:center;position:relative;animation:slideUp .3s ease;
+}
+@keyframes slideUp{from{opacity:0;transform:translateY(30px);}to{opacity:1;transform:translateY(0);}}
+.modal h3{font-family:'Bebas Neue',sans-serif;font-size:2rem;color:var(--azul);margin-bottom:8px;}
+.modal p{color:#555;margin-bottom:24px;line-height:1.6;}
+.modal-close{
+  position:absolute;top:16px;right:20px;background:none;border:none;
+  font-size:1.4rem;cursor:pointer;color:#aaa;
+}
+.modal-close:hover{color:var(--dark);}
+
+@media(max-width:600px){
+  nav{display:none;}
+  .hero{padding:60px 16px 80px;}
+  .form-box{padding:24px;}
+  .anuncio-form{padding:24px;}
+}
+</style>
+</head>
+<body>
+
+<!-- FLOATING WHATSAPP -->
+<a href="https://wa.me/554299222222?text=Olá!%20Quero%20participar%20do%20grupo%20Copa%202026%20🏆" target="_blank" class="fab-whats" title="Falar no WhatsApp">💬</a>
+
+<!-- PANINI BAR -->
+<div class="panini-bar">
+  <p>
+    <span class="panini-badge">⭐ OFICIAL</span>
+    Representante Autorizado PANINI no município de Turvo · PR
+    <span class="panini-badge">🏆 PANINI</span>
+  </p>
+</div>
+
+<!-- HEADER -->
+<header>
+  <div class="container header-inner">
+    <div class="logo-area">
+      <div class="logo-icon">🍦</div>
+      <div class="logo-text">
+        <span class="logo-top">Sorvetes Guri</span>
+        <span class="logo-sub">Turvo · Copa 2026 🏆</span>
+      </div>
+    </div>
+    <nav>
+      <a href="#prevenda">Pré-venda</a>
+      <a href="#cadastro">Cadastro</a>
+      <a href="#whatsapp">WhatsApp</a>
+      <a href="#diatrocas">Dia de Trocas</a>
+      <a href="#troca">Mural</a>
+    </nav>
+  </div>
+</header>
+
+<!-- COUNTDOWN -->
+<div class="countdown-bar">
+  <p>⏳ Copa do Mundo 2026 começa em <strong id="countdown-text"></strong></p>
+  <div id="timer">
+    <div class="tc"><span id="t-dias">--</span><small>Dias</small></div>
+    <span class="tc-sep">:</span>
+    <div class="tc"><span id="t-hrs">--</span><small>Horas</small></div>
+    <span class="tc-sep">:</span>
+    <div class="tc"><span id="t-min">--</span><small>Min</small></div>
+    <span class="tc-sep">:</span>
+    <div class="tc"><span id="t-sec">--</span><small>Seg</small></div>
+  </div>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-balls">
+    <div class="ball"></div>
+    <div class="ball"></div>
+    <div class="ball"></div>
+  </div>
+  <div class="container">
+    <div class="hero-badge">🏆 Pré-venda Exclusiva • Copa 2026</div>
+    <div style="display:inline-block;background:rgba(255,255,255,.15);border:2px solid rgba(255,255,255,.3);color:#fff;font-family:'Oswald',sans-serif;font-size:.8rem;letter-spacing:1.5px;padding:5px 16px;border-radius:30px;margin-bottom:16px;font-weight:600;text-transform:uppercase;">
+      ⭐ Representante Oficial PANINI em Turvo
+    </div>
+    <h1>FIGURINHAS <span>COPA</span><br>DO MUNDO 2026</h1>
+    <p>Complete seu álbum, troque com amigos e viva a Copa com a gente! Cadastre-se para garantir seu álbum e pacotes de figurinhas na pré-venda com desconto exclusivo. 🇧🇷</p>
+    <div class="hero-btns">
+      <a href="#cadastro" class="btn btn-amarelo">📝 Quero me Cadastrar</a>
+      <a href="#diatrocas" class="btn btn-verde">🏟️ Dia de Trocas na Praça</a>
+      <a href="#whatsapp" class="btn btn-whats">💬 Entrar no Grupo</a>
+    </div>
+  </div>
+</section>
+
+<!-- COMO FUNCIONA -->
+<section class="como-section" id="como">
+  <div class="container">
+    <span class="section-tag tag-amarelo">🎯 Como Funciona</span>
+    <h2>SIMPLES ASSIM!</h2>
+    <p class="lead">Em 4 passos você já está participando de tudo.</p>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <h3>Cadastre-se</h3>
+        <p>Preencha o formulário abaixo com seus dados e escolha o que quer reservar na pré-venda.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <h3>Entre no Grupo</h3>
+        <p>Acesse o grupo do WhatsApp e fique por dentro de tudo: novidades, sorteios e trocas.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <h3>Retire na Loja</h3>
+        <p>Quando chegar seu pedido, avisamos no WhatsApp. É só vir retirar aqui na Sorvetes Guri!</p>
+      </div>
+      <div class="step">
+        <div class="step-num">4</div>
+        <h3>Troque Aqui</h3>
+        <p>Anuncie suas repetidas e encontre quem tem o que você precisa. Tudo pelo site!</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRÉ-VENDA -->
+<section class="prevenda" id="prevenda">
+  <div class="container">
+    <span class="section-tag tag-verde">🛒 Pré-venda</span>
+    <h2>GARANTA O SEU COM DESCONTO!</h2>
+    <p class="lead">Produtos com preço especial para quem se cadastrar agora. Estoque limitado!</p>
+    <div style="display:inline-flex;align-items:center;gap:10px;background:#e8f7ef;border:2px solid var(--verde);border-radius:14px;padding:12px 20px;margin-bottom:28px;">
+      <span style="font-size:1.6rem;">⭐</span>
+      <div>
+        <p style="font-family:'Oswald',sans-serif;font-size:1rem;color:var(--verde);font-weight:700;letter-spacing:1px;margin:0;">REPRESENTANTE OFICIAL PANINI</p>
+        <p style="font-size:.8rem;color:#555;margin:0;">Produtos originais e lacrados direto da distribuidora Panini</p>
+      </div>
+    </div>
+    <div class="products-grid">
+
+      <div class="product-card destaque">
+        <div class="product-badge">⭐ Mais Pedido</div>
+        <div class="product-icon">📒</div>
+        <h3>Álbum Oficial Copa 2026</h3>
+        <div class="price">R$ 19,90 <small>pré-venda</small></div>
+        <p>Álbum completo com capa dura e todas as seções dos países participantes. Edição especial com 3 figurinhas incluídas.</p>
+        <button class="btn btn-verde" onclick="abrirModal('album')">Reservar Álbum</button>
+      </div>
+
+      <div class="product-card">
+        <div class="product-icon">🎴</div>
+        <h3>Pacote Básico</h3>
+        <div class="price">R$ 12,00 <small>/ 3 envelopes</small></div>
+        <p>3 envelopes com 5 figurinhas cada. Perfeito pra começar ou complementar sua coleção.</p>
+        <button class="btn btn-verde" onclick="abrirModal('basico')">Reservar Pacote</button>
+      </div>
+
+      <div class="product-card">
+        <div class="product-icon">🎁</div>
+        <h3>Kit Colecionador</h3>
+        <div class="price">R$ 49,90 <small>/ kit</small></div>
+        <p>Álbum + 10 envelopes de figurinhas + 1 figurinha especial brilhante por apenas R$ 49,90.</p>
+        <button class="btn btn-amarelo" onclick="abrirModal('kit')">Reservar Kit</button>
+      </div>
+
+      <div class="product-card">
+        <div class="product-icon">📦</div>
+        <h3>Box Família</h3>
+        <div class="price">R$ 89,90 <small>/ box</small></div>
+        <p>2 álbuns + 25 envelopes. Ideal para pais e filhos completarem juntos!</p>
+        <button class="btn btn-azul" onclick="abrirModal('box')">Reservar Box</button>
+      </div>
+
+    </div>
+    <p style="text-align:center;color:#888;font-size:.88rem;">⚠️ A reserva garante sua preferência. O pagamento é feito na retirada na loja.</p>
+  </div>
+</section>
+
+<!-- CADASTRO -->
+<section class="form-section" id="cadastro">
+  <div class="container">
+    <span class="section-tag tag-amarelo">📝 Pré-venda</span>
+    <h2>FAÇA SEU CADASTRO</h2>
+    <p class="lead">Reserve seu álbum e figurinhas com antecedência. Você será avisado pelo WhatsApp quando chegar!</p>
+
+    <div class="form-box">
+      <form id="mainForm" onsubmit="submitForm(event)">
+        <div class="form-row">
+          <div class="form-group">
+            <label>👤 Nome Completo *</label>
+            <input type="text" placeholder="Seu nome" required>
+          </div>
+          <div class="form-group">
+            <label>📱 WhatsApp *</label>
+            <input type="tel" placeholder="(42) 9 9999-9999" required>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>📧 E-mail</label>
+            <input type="email" placeholder="seu@email.com">
+          </div>
+          <div class="form-group">
+            <label>🏠 Bairro (em Turvo)</label>
+            <input type="text" placeholder="Seu bairro">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>🛒 O que deseja reservar? *</label>
+          <div class="checkbox-group">
+            <label class="checkbox-item">
+              <input type="checkbox" name="produto" value="album">
+              <span>📒 Álbum Oficial Copa 2026 — R$ 19,90</span>
+            </label>
+            <label class="checkbox-item">
+              <input type="checkbox" name="produto" value="basico">
+              <span>🎴 Pacote Básico (3 envelopes) — R$ 12,00</span>
+            </label>
+            <label class="checkbox-item">
+              <input type="checkbox" name="produto" value="kit">
+              <span>🎁 Kit Colecionador (álbum + 10 env.) — R$ 49,90</span>
+            </label>
+            <label class="checkbox-item">
+              <input type="checkbox" name="produto" value="box">
+              <span>📦 Box Família (2 álbuns + 25 env.) — R$ 89,90</span>
+            </label>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>💬 Entrar no grupo do WhatsApp?</label>
+          <select>
+            <option value="sim">✅ Sim, quero entrar no grupo!</option>
+            <option value="nao">Não, obrigado</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>📝 Alguma observação?</label>
+          <textarea placeholder="Ex: quero comprar mais de 1 álbum, tenho dúvidas sobre entrega..."></textarea>
+        </div>
+
+        <div class="form-submit">
+          <button type="submit" class="btn btn-amarelo" style="width:100%;font-size:1.1rem;padding:16px;">
+            ✅ Confirmar Meu Cadastro
+          </button>
+        </div>
+      </form>
+
+      <div class="success-msg" id="successMsg">
+        <h3>🎉 Cadastro Confirmado!</h3>
+        <p>Oba! Em breve você receberá uma mensagem no WhatsApp com todos os detalhes da sua reserva. Fique de olho!</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHATSAPP -->
+<section class="whats-section" id="whatsapp">
+  <div class="container">
+    <span class="section-tag tag-whats">💬 Comunidade</span>
+    <h2>GRUPO OFICIAL NO WHATSAPP</h2>
+    <p class="lead">Entre para o grupo e fique por dentro de tudo sobre a Copa e as figurinhas!</p>
+
+    <div class="whats-card">
+      <div class="whats-phone">
+        <div class="wi">💬</div>
+        <h3>Grupo Copa 2026 Guri</h3>
+        <p>Mais de 200 colecionadores de Turvo e região já participam!</p>
+        <ul class="whats-benefits">
+          <li>Novidades sobre lançamentos</li>
+          <li>Trocas direto no grupo</li>
+          <li>Sorteios e promoções exclusivas</li>
+          <li>Avisos de chegada de pedidos</li>
+          <li>Dicas para completar o álbum</li>
+        </ul>
+        <a href="https://chat.whatsapp.com/LINK-DO-GRUPO" target="_blank" class="btn btn-whats" style="width:100%;">
+          Entrar no Grupo Agora 🚀
+        </a>
+      </div>
+      <div>
+        <h3 style="font-family:'Bebas Neue',sans-serif;font-size:1.8rem;color:var(--azul);margin-bottom:12px;">POR QUE ENTRAR?</h3>
+        <p style="color:#555;margin-bottom:20px;line-height:1.7;">Nosso grupo é o ponto de encontro de todos os colecionadores de Turvo. Você será o primeiro a saber quando as figurinhas chegarem, vai poder fazer trocas antes de todo mundo e ainda concorrer a sorteios especiais!</p>
+        <div style="background:#f0fdf4;border-radius:16px;padding:20px;margin-bottom:16px;border:2px solid #bbf7d0;">
+          <p style="font-weight:800;color:var(--verde);margin-bottom:6px;">🎁 BÔNUS DE BOAS-VINDAS</p>
+          <p style="color:#555;font-size:.9rem;">Ao entrar no grupo, você concorre a <strong>1 envelope de figurinhas grátis</strong> sorteado toda semana!</p>
+        </div>
+        <a href="https://chat.whatsapp.com/LINK-DO-GRUPO" target="_blank" class="btn btn-whats">
+          💬 Quero Entrar no Grupo
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DIA DE TROCAS NA PRAÇA -->
+<section class="diatrocas-section" id="diatrocas">
+  <div class="container">
+    <span class="section-tag" style="background:rgba(0,39,118,.12);color:var(--azul);">📅 Evento Presencial</span>
+    <h2>DIA DE TROCAS NA PRAÇA!</h2>
+    <p class="lead">Venha pessoalmente trocar suas figurinhas com outros colecionadores da cidade. Um evento especial para toda a família!</p>
+
+    <div class="diatrocas-inner">
+
+      <!-- Card do evento -->
+      <div class="evento-card">
+        <div class="evento-header">
+          <div class="eh-icon">🏟️</div>
+          <div>
+            <h3>Encontro de Colecionadores</h3>
+            <p>Praça 31 de Outubro · Turvo · PR</p>
+          </div>
+        </div>
+        <div class="evento-body">
+          <div class="evento-info">
+            <div class="ei-row">
+              <div class="ei-icon azul">📍</div>
+              <div class="ei-text">
+                <h4>Local</h4>
+                <p>Praça 31 de Outubro, anexo à <strong>Sorvetes Guri</strong><br>Turvo · Paraná</p>
+              </div>
+            </div>
+            <div class="ei-row">
+              <div class="ei-icon amarelo">📅</div>
+              <div class="ei-text">
+                <h4>Data do Próximo Evento</h4>
+                <p>A definir — <strong>fique de olho no grupo do WhatsApp!</strong><br>Eventos acontecerão regularmente durante a Copa.</p>
+              </div>
+            </div>
+            <div class="ei-row">
+              <div class="ei-icon">🕐</div>
+              <div class="ei-text">
+                <h4>Horário</h4>
+                <p>A partir das <strong>14h até as 18h</strong><br>Entrada gratuita para toda a família 🎉</p>
+              </div>
+            </div>
+            <div class="ei-row">
+              <div class="ei-icon laranja">🍦</div>
+              <div class="ei-text">
+                <h4>Sorvetes Guri no Evento</h4>
+                <p>Aproveite para tomar um sorvete e sair com suas figurinhas faltando! <strong>Desconto especial no dia para participantes.</strong></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Infos e CTA -->
+      <div class="diatrocas-info">
+
+        <div class="di-highlight">
+          <h3>📋 Como Participar?</h3>
+          <ul class="regras-lista">
+            <li>Traga suas figurinhas repetidas organizadas</li>
+            <li>Anote quais você ainda precisa para facilitar</li>
+            <li>As trocas são 1 por 1 (combinado entre as partes)</li>
+            <li>Vendas e negociações também são permitidas</li>
+            <li>Crianças bem-vindas com acompanhante</li>
+            <li>Entrada e participação totalmente gratuitas</li>
+          </ul>
+        </div>
+
+        <div class="di-highlight">
+          <h3>💡 Dicas para o Dia</h3>
+          <p>Venha com seu álbum para conferir na hora quais figurinhas ainda faltam. Quanto mais organizado você vier, mais trocas consegue fazer!</p>
+        </div>
+
+        <div class="proximo-evento">
+          <p>📢 Fique sabendo da próxima data</p>
+          <h3>ENTRE NO GRUPO</h3>
+          <span>Anunciamos as datas lá primeiro!</span>
+          <a href="https://chat.whatsapp.com/LINK-DO-GRUPO" target="_blank" class="notificar-btn">
+            💬 Me Avise no WhatsApp
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TROCA DE FIGURINHAS -->
+<section class="troca-section" id="troca">
+  <div class="container">
+    <span class="section-tag tag-azul">🔄 Troca</span>
+    <h2>MURAL DE TROCAS</h2>
+    <p class="lead">Anuncie suas repetidas e encontre quem tem o que você precisa. Grátis e fácil!</p>
+
+    <div class="troca-board">
+      <!-- Tem pra dar -->
+      <div class="troca-col oferta">
+        <h3>📤 Tenho pra Dar / Vender</h3>
+
+        <div class="sticker-post">
+          <div class="sticker-num">47</div>
+          <div class="sticker-info">
+            <h4>Figurinha Nº 47 — Brasil</h4>
+            <p>WhatsApp: (42) 9 9999-****</p>
+            <span class="tag-qty">✅ Tenho 3 repetidas</span>
+          </div>
+        </div>
+
+        <div class="sticker-post">
+          <div class="sticker-num">112</div>
+          <div class="sticker-info">
+            <h4>Figurinha Nº 112 — Argentina</h4>
+            <p>WhatsApp: (42) 9 8888-****</p>
+            <span class="tag-qty">✅ Tenho 2 repetidas</span>
+          </div>
+        </div>
+
+        <div class="sticker-post">
+          <div class="sticker-num">⭐</div>
+          <div class="sticker-info">
+            <h4>Figurinha Brilhante — Neymar</h4>
+            <p>WhatsApp: (42) 9 7777-****</p>
+            <span class="tag-qty">✅ Tenho 1 — R$ 5,00</span>
+          </div>
+        </div>
+
+        <p style="font-size:.82rem;color:#aaa;text-align:center;margin-top:8px;">← Anúncios reais aparecerão aqui</p>
+      </div>
+
+      <!-- Precisa -->
+      <div class="troca-col busca">
+        <h3>📥 Preciso / Estou Buscando</h3>
+
+        <div class="sticker-post">
+          <div class="sticker-num">88</div>
+          <div class="sticker-info">
+            <h4>Figurinha Nº 88 — Portugal</h4>
+            <p>WhatsApp: (42) 9 6666-****</p>
+            <span class="tag-want">🔍 Busco essa figurinha</span>
+          </div>
+        </div>
+
+        <div class="sticker-post">
+          <div class="sticker-num">203</div>
+          <div class="sticker-info">
+            <h4>Figurinha Nº 203 — França</h4>
+            <p>WhatsApp: (42) 9 5555-****</p>
+            <span class="tag-want">🔍 Busco essa figurinha</span>
+          </div>
+        </div>
+
+        <div class="sticker-post">
+          <div class="sticker-num">⭐</div>
+          <div class="sticker-info">
+            <h4>Qualquer Brilhante do Brasil</h4>
+            <p>WhatsApp: (42) 9 4444-****</p>
+            <span class="tag-want">🔍 Pago até R$ 8,00</span>
+          </div>
+        </div>
+
+        <p style="font-size:.82rem;color:#aaa;text-align:center;margin-top:8px;">← Anúncios reais aparecerão aqui</p>
+      </div>
+    </div>
+
+    <!-- Formulário de anúncio -->
+    <div class="anuncio-form">
+      <h3>📢 Anunciar Figurinha</h3>
+      <p>Preencha abaixo e seu anúncio aparecerá no mural para toda a comunidade ver!</p>
+
+      <div class="tipo-troca" style="margin-bottom:20px;">
+        <div class="tipo-btn ativo" onclick="setTipo('oferta', this)">
+          <span>📤</span>
+          Tenho pra Dar
+        </div>
+        <div class="tipo-btn" onclick="setTipo('busca', this)">
+          <span>📥</span>
+          Estou Buscando
+        </div>
+        <div class="tipo-btn" onclick="setTipo('venda', this)">
+          <span>💰</span>
+          Quero Vender
+        </div>
+      </div>
+
+      <input type="hidden" id="tipoAnuncio" value="oferta">
+
+      <div class="form-row" style="display:grid;grid-template-columns:1fr 1fr;gap:14px;">
+        <div class="form-group">
+          <label>Seu Nome *</label>
+          <input type="text" placeholder="João Silva">
+        </div>
+        <div class="form-group">
+          <label>WhatsApp *</label>
+          <input type="tel" placeholder="(42) 9 9999-9999">
+        </div>
+      </div>
+
+      <div class="form-row" style="display:grid;grid-template-columns:1fr 1fr;gap:14px;">
+        <div class="form-group">
+          <label>Nº da Figurinha *</label>
+          <input type="text" placeholder="Ex: 47, 112, 203">
+        </div>
+        <div class="form-group">
+          <label>País / Seleção</label>
+          <input type="text" placeholder="Ex: Brasil, Portugal">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Detalhes (quantidade, valor, condição...)</label>
+        <textarea placeholder="Ex: Tenho 3 repetidas da nº 47. Aceito troca pela nº 88 ou 203."></textarea>
+      </div>
+
+      <button class="btn btn-verde" onclick="submitAnuncio()" style="width:100%;">
+        📢 Publicar Anúncio Grátis
+      </button>
+
+      <div id="anuncioOk" style="display:none;margin-top:14px;background:#e8f7ef;border-radius:12px;padding:16px;text-align:center;">
+        <p style="color:var(--verde);font-weight:800;">✅ Anúncio enviado! Será publicado no mural em breve.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">🍦 Sorvetes Guri</div>
+  <div class="footer-sub">Representante Oficial PANINI · Turvo · Paraná · Copa 2026 🏆</div>
+  <div class="footer-links">
+    <a href="#prevenda">Pré-venda</a>
+    <a href="#cadastro">Cadastro</a>
+    <a href="#whatsapp">WhatsApp</a>
+    <a href="#diatrocas">Dia de Trocas</a>
+    <a href="#troca">Mural de Trocas</a>
+  </div>
+  <div class="footer-copy">
+    © 2026 Sorvetes Guri Turvo · Representante Oficial Panini · Todos os direitos reservados
+  </div>
+</footer>
+
+<!-- MODAL -->
+<div class="modal-overlay" id="modalOverlay">
+  <div class="modal">
+    <button class="modal-close" onclick="fecharModal()">✕</button>
+    <div style="font-size:3rem;margin-bottom:12px;" id="modalIcon">🎁</div>
+    <h3 id="modalTitle">Reservar Produto</h3>
+    <p id="modalDesc">Desça até o formulário de cadastro, marque este produto e confirme sua reserva!</p>
+    <a href="#cadastro" class="btn btn-verde" onclick="fecharModal()" style="display:block;margin-top:6px;">
+      Ir para o Cadastro ↓
+    </a>
+  </div>
+</div>
+
+<script>
+// ─── COUNTDOWN ───
+(function() {
+  const copa = new Date('2026-06-11T12:00:00');
+  function update() {
+    const now = new Date();
+    const diff = copa - now;
+    if (diff <= 0) { document.getElementById('countdown-text').textContent = 'A Copa já começou! 🎉'; return; }
+    const d = Math.floor(diff / 86400000);
+    const h = Math.floor((diff % 86400000) / 3600000);
+    const m = Math.floor((diff % 3600000) / 60000);
+    const s = Math.floor((diff % 60000) / 1000);
+    document.getElementById('t-dias').textContent = String(d).padStart(2,'0');
+    document.getElementById('t-hrs').textContent = String(h).padStart(2,'0');
+    document.getElementById('t-min').textContent = String(m).padStart(2,'0');
+    document.getElementById('t-sec').textContent = String(s).padStart(2,'0');
+    document.getElementById('countdown-text').textContent = '';
+  }
+  update(); setInterval(update, 1000);
+})();
+
+// ─── FORM ───
+function submitForm(e) {
+  e.preventDefault();
+  document.getElementById('mainForm').style.display = 'none';
+  document.getElementById('successMsg').style.display = 'block';
+}
+
+// ─── TIPO TROCA ───
+function setTipo(tipo, el) {
+  document.querySelectorAll('.tipo-btn').forEach(b => b.classList.remove('ativo'));
+  el.classList.add('ativo');
+  document.getElementById('tipoAnuncio').value = tipo;
+}
+
+// ─── ANÚNCIO ───
+function submitAnuncio() {
+  document.getElementById('anuncioOk').style.display = 'block';
+  setTimeout(() => { document.getElementById('anuncioOk').style.display = 'none'; }, 4000);
+}
+
+// ─── MODAL ───
+const modais = {
+  album: { icon:'📒', title:'Reservar Álbum Oficial', desc:'Álbum da Copa 2026 com 3 figurinhas incluídas por R$ 19,90 na pré-venda. Faça seu cadastro abaixo!' },
+  basico: { icon:'🎴', title:'Reservar Pacote Básico', desc:'3 envelopes com 5 figurinhas cada por R$ 12,00. Cadastre-se e garanta o seu!' },
+  kit: { icon:'🎁', title:'Reservar Kit Colecionador', desc:'Álbum + 10 envelopes + figurinha brilhante especial por R$ 49,90. Faça sua reserva!' },
+  box: { icon:'📦', title:'Reservar Box Família', desc:'2 álbuns + 25 envelopes por R$ 89,90. Perfeito para toda a família! Cadastre-se abaixo.' },
+};
+
+function abrirModal(tipo) {
+  const m = modais[tipo];
+  document.getElementById('modalIcon').textContent = m.icon;
+  document.getElementById('modalTitle').textContent = m.title;
+  document.getElementById('modalDesc').textContent = m.desc;
+  document.getElementById('modalOverlay').classList.add('open');
+}
+function fecharModal() {
+  document.getElementById('modalOverlay').classList.remove('open');
+}
+document.getElementById('modalOverlay').addEventListener('click', function(e) {
+  if (e.target === this) fecharModal();
+});
+</script>
+</body>
+</html>
