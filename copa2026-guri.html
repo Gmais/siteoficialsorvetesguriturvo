@@ -574,37 +574,37 @@ footer{
     </div>
     <div class="products-grid">
 
-      <div class="product-card destaque">
-        <div class="product-badge">⭐ Mais Pedido</div>
+      <div class="product-card">
         <div class="product-icon">📒</div>
-        <h3>Álbum Oficial Copa 2026</h3>
-        <div class="price">R$ 19,90 <small>pré-venda</small></div>
-        <p>Álbum completo com capa dura e todas as seções dos países participantes. Edição especial com 3 figurinhas incluídas.</p>
-        <button class="btn btn-verde" onclick="abrirModal('album')">Reservar Álbum</button>
+        <h3>Álbum Oficial (Brochura)</h3>
+        <div class="price">R$ 24,90 <small>tradicional</small></div>
+        <p>Álbum clássico com capa brochura, ideal para quem quer viver a emoção da Copa com o melhor custo-benefício.</p>
+        <button class="btn btn-verde" onclick="abrirModal('album_tradicional')">Reservar Brochura</button>
+      </div>
+
+      <div class="product-card destaque">
+        <div class="product-badge">⭐ Mais Vendido</div>
+        <div class="product-icon">📕</div>
+        <h3>Álbum Premium (Capa Dura)</h3>
+        <div class="price">R$ 74,90 <small>colecionador</small></div>
+        <p>Álbum com capa dura ultra resistente para preservar sua coleção por gerações. Acabamento premium.</p>
+        <button class="btn btn-verde" onclick="abrirModal('album_premium')">Reservar Capa Dura</button>
+      </div>
+
+      <div class="product-card">
+        <div class="product-icon">🏆</div>
+        <h3>Edição Ouro (Capa Dura)</h3>
+        <div class="price">R$ 79,90 <small>limitada</small></div>
+        <p>A versão mais luxuosa: capa dura com detalhes em relevo e acabamento metalizado. Edição limitada para fãs!</p>
+        <button class="btn btn-amarelo" onclick="abrirModal('album_luxo')">Reservar Edição Ouro</button>
       </div>
 
       <div class="product-card">
         <div class="product-icon">🎴</div>
-        <h3>Pacote Básico</h3>
-        <div class="price">R$ 12,00 <small>/ 3 envelopes</small></div>
-        <p>3 envelopes com 5 figurinhas cada. Perfeito pra começar ou complementar sua coleção.</p>
-        <button class="btn btn-verde" onclick="abrirModal('basico')">Reservar Pacote</button>
-      </div>
-
-      <div class="product-card">
-        <div class="product-icon">🎁</div>
-        <h3>Kit Colecionador</h3>
-        <div class="price">R$ 49,90 <small>/ kit</small></div>
-        <p>Álbum + 10 envelopes de figurinhas + 1 figurinha especial brilhante por apenas R$ 49,90.</p>
-        <button class="btn btn-amarelo" onclick="abrirModal('kit')">Reservar Kit</button>
-      </div>
-
-      <div class="product-card">
-        <div class="product-icon">📦</div>
-        <h3>Box Família</h3>
-        <div class="price">R$ 89,90 <small>/ box</small></div>
-        <p>2 álbuns + 25 envelopes. Ideal para pais e filhos completarem juntos!</p>
-        <button class="btn btn-azul" onclick="abrirModal('box')">Reservar Box</button>
+        <h3>Pacote de Figurinhas</h3>
+        <div class="price">R$ 7,00 <small>/ envelope</small></div>
+        <p>Envelope oficial com 7 figurinhas. Garanta seus pacotes na pré-venda e complete seu álbum mais rápido!</p>
+        <button class="btn btn-azul" onclick="abrirModal('pacote')">Reservar Pacotes</button>
       </div>
 
     </div>
@@ -646,20 +646,20 @@ footer{
           <label>🛒 O que deseja reservar? *</label>
           <div class="checkbox-group">
             <label class="checkbox-item">
-              <input type="checkbox" name="produto" value="album">
-              <span>📒 Álbum Oficial Copa 2026 — R$ 19,90</span>
+              <input type="checkbox" name="produto" value="album_tradicional">
+              <span>📒 Álbum Tradicional (Brochura) — R$ 24,90</span>
             </label>
             <label class="checkbox-item">
-              <input type="checkbox" name="produto" value="basico">
-              <span>🎴 Pacote Básico (3 envelopes) — R$ 12,00</span>
+              <input type="checkbox" name="produto" value="album_premium">
+              <span>📕 Álbum Premium (Capa Dura) — R$ 74,90</span>
             </label>
             <label class="checkbox-item">
-              <input type="checkbox" name="produto" value="kit">
-              <span>🎁 Kit Colecionador (álbum + 10 env.) — R$ 49,90</span>
+              <input type="checkbox" name="produto" value="album_luxo">
+              <span>🏆 Edição Ouro (Capa Dura) — R$ 79,90</span>
             </label>
             <label class="checkbox-item">
-              <input type="checkbox" name="produto" value="box">
-              <span>📦 Box Família (2 álbuns + 25 env.) — R$ 89,90</span>
+              <input type="checkbox" name="produto" value="pacote">
+              <span>🎴 Envelopes de figurinhas (unidade) — R$ 7,00</span>
             </label>
           </div>
         </div>

@@ -5,10 +5,10 @@ const WHATSAPP_LINK = "https://wa.me/554299222222?text=Olá!%20Quero%20participa
 const GROUP_LINK = "https://chat.whatsapp.com/LINK-DO-GRUPO";
 
 const modais: Record<string, { icon: string; title: string; desc: string }> = {
-  album: { icon: "📒", title: "Reservar Álbum Oficial", desc: "Álbum da Copa 2026 com 3 figurinhas incluídas por R$ 19,90 na pré-venda. Faça seu cadastro abaixo!" },
-  basico: { icon: "🎴", title: "Reservar Pacote Básico", desc: "3 envelopes com 5 figurinhas cada por R$ 12,00. Cadastre-se e garanta o seu!" },
-  kit: { icon: "🎁", title: "Reservar Kit Colecionador", desc: "Álbum + 10 envelopes + figurinha brilhante especial por R$ 49,90. Faça sua reserva!" },
-  box: { icon: "📦", title: "Reservar Box Família", desc: "2 álbuns + 25 envelopes por R$ 89,90. Perfeito para toda a família! Cadastre-se abaixo." },
+  album_tradicional: { icon: "📒", title: "Reservar Álbum Tradicional", desc: "Álbum com capa brochura por R$ 24,90. Ideal para quem quer colecionar com economia!" },
+  album_premium: { icon: "📕", title: "Reservar Álbum Premium", desc: "Álbum com capa dura resistente por R$ 74,90. Coleção para a vida toda!" },
+  album_luxo: { icon: "🏆", title: "Reservar Edição Ouro", desc: "Edição limitada com capa dura e acabamento especial por R$ 79,90. O preferido dos colecionadores!" },
+  pacote: { icon: "🎴", title: "Reservar Envelopes", desc: "Envelopes oficiais com 7 figurinhas por R$ 7,00 cada. Garanta os seus!" },
 };
 
 function useCountdown() {
@@ -168,10 +168,10 @@ const Index = () => {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-10">
             {[
-              { key: "album", badge: "⭐ Mais Pedido", icon: "📒", name: "Álbum Oficial Copa 2026", price: "R$ 19,90", sub: "pré-venda", desc: "Álbum completo com capa dura e todas as seções dos países participantes. Edição especial com 3 figurinhas incluídas.", btnClass: "btn-verde", destaque: true },
-              { key: "basico", icon: "🎴", name: "Pacote Básico", price: "R$ 12,00", sub: "/ 3 envelopes", desc: "3 envelopes com 5 figurinhas cada. Perfeito pra começar ou complementar sua coleção.", btnClass: "btn-verde" },
-              { key: "kit", icon: "🎁", name: "Kit Colecionador", price: "R$ 49,90", sub: "/ kit", desc: "Álbum + 10 envelopes de figurinhas + 1 figurinha especial brilhante por apenas R$ 49,90.", btnClass: "btn-amarelo" },
-              { key: "box", icon: "📦", name: "Box Família", price: "R$ 89,90", sub: "/ box", desc: "2 álbuns + 25 envelopes. Ideal para pais e filhos completarem juntos!", btnClass: "btn-azul" },
+              { key: "album_tradicional", icon: "📒", name: "Álbum Tradicional", price: "R$ 24,90", sub: "brochura", desc: "Álbum clássico com capa brochura, ideal para quem quer viver a emoção da Copa com economia.", btnClass: "btn-verde" },
+              { key: "album_premium", badge: "⭐ Mais Vendido", icon: "📕", name: "Álbum Premium", price: "R$ 74,90", sub: "capa dura", desc: "Álbum com capa dura ultra resistente para preservar sua coleção por gerações. Acabamento premium.", btnClass: "btn-verde", destaque: true },
+              { key: "album_luxo", icon: "🏆", name: "Edição Ouro", price: "R$ 79,90", sub: "limitada", desc: "A versão mais luxuosa: capa dura com detalhes em relevo e acabamento metalizado. Edição limitada!", btnClass: "btn-amarelo" },
+              { key: "pacote", icon: "🎴", name: "Pacote Figurinhas", price: "R$ 7,00", sub: "/ envelope", desc: "Envelope oficial com 7 figurinhas. Garanta seus pacotes na pré-venda agora mesmo!", btnClass: "btn-azul" },
             ].map(p => (
               <div key={p.key} className={`rounded-[20px] p-7 text-center transition-all relative overflow-hidden border-2 hover:-translate-y-1 hover:shadow-lg ${p.destaque ? "border-yellow-400" : "border-gray-200 hover:border-green-500"}`} style={p.destaque ? { background: "linear-gradient(135deg,#fffde7,#fff9c4)" } : { background: "#fff" }}>
                 {p.badge && <div className="absolute top-4 right-4 text-[.7rem] font-extrabold tracking-wide uppercase px-2.5 py-1 rounded-full" style={{ background: "hsl(var(--laranja))", color: "#fff" }}>{p.badge}</div>}
@@ -222,10 +222,10 @@ const Index = () => {
                   <label className="font-bold text-sm" style={{ color: "rgba(255,255,255,.9)" }}>🛒 O que deseja reservar? *</label>
                   <div className="flex flex-col gap-2.5">
                     {[
-                      ["album", "📒 Álbum Oficial Copa 2026 — R$ 19,90"],
-                      ["basico", "🎴 Pacote Básico (3 envelopes) — R$ 12,00"],
-                      ["kit", "🎁 Kit Colecionador (álbum + 10 env.) — R$ 49,90"],
-                      ["box", "📦 Box Família (2 álbuns + 25 env.) — R$ 89,90"],
+                      ["album_tradicional", "📒 Álbum Tradicional (Brochura) — R$ 24,90"],
+                      ["album_premium", "📕 Álbum Premium (Capa Dura) — R$ 74,90"],
+                      ["album_luxo", "🏆 Edição Ouro (Capa Dura) — R$ 79,90"],
+                      ["pacote", "🎴 Envelopes de figurinhas (unidade) — R$ 7,00"],
                     ].map(([val, label]) => (
                       <label key={val} className="flex items-center gap-2.5 cursor-pointer">
                         <input type="checkbox" name="produto" value={val} className="w-[18px] h-[18px]" style={{ accentColor: "hsl(var(--amarelo))" }} />
