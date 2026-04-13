@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --verde: #009c3b;
+    --amarelo: #ffdf00;
+    --azul: #002776;
+    --laranja: #ff6b00;
+    --branco: #ffffff;
+    --creme: #fffbf0;
+    --cinza: #f4f4f4;
+    --dark: #111827;
+  }
+}
+
+@layer utilities {
+  .btn-copa {
+    @apply inline-block px-[32px] py-[14px] rounded-[50px] font-oswald text-[1.1rem] tracking-[1px] no-underline border-none cursor-pointer transition-all duration-[0.25s] font-semibold uppercase;
+  }
+  .btn-amarelo {
+    @apply bg-amarelo text-azul hover:bg-[#ffd000] hover:-translate-y-[2px] hover:shadow-[0_8px_24px_rgba(255,223,0,0.5)];
+  }
+  .btn-verde {
+    @apply bg-verde text-white hover:bg-[#007d2f] hover:-translate-y-[2px] hover:shadow-[0_8px_24px_rgba(0,156,59,0.4)];
+  }
+  .btn-azul {
+    @apply bg-azul text-white hover:bg-[#001a59] hover:-translate-y-[2px] hover:shadow-[0_8px_24px_rgba(0,39,118,0.4)];
+  }
+  .btn-whats {
+    @apply bg-[#25D366] text-white hover:bg-[#1ebe58] hover:-translate-y-[2px] hover:shadow-[0_8px_24px_rgba(37,211,102,0.4)];
+  }
+  .animate-pulse-whats {
+    animation: pulse-whats 2s infinite;
+  }
+  @keyframes pulse-whats {
+    0%, 100% { box-shadow: 0 6px 24px rgba(37,211,102,0.5); }
+    50% { box-shadow: 0 6px 32px rgba(37,211,102,0.9); }
+  }
+  .animate-slide-up {
+    animation: slideUp 0.3s ease;
+  }
+  @keyframes slideUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-18px); }
+  }
+}
